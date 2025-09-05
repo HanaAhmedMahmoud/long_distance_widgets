@@ -8,3 +8,10 @@ Created iOS widgets using Swift and Widget toolkit on Xcode bringing prototypes 
 
 ### Final chosen design:
 <img width="547" height="145" alt="Screenshot 2025-09-05 at 12 10 19" src="https://github.com/user-attachments/assets/96338dda-36ce-4fbc-ba3c-aede36d64be5" />
+
+## Development Diary 
+### 05/09/2025
+- Set up project on github and on Xcode 
+- Taught Phillip github commands
+- Initial coding of prototype completed by Hana, need to work on sorting out offsets
+
