@@ -35,16 +35,68 @@ struct WidgetsEntryView : View {
             Image("background")
                 .resizable()
                 .scaledToFill()
-                .clipped()
+                .ignoresSafeArea()
+            
+            //contain all of images
             VStack {
-                Text("11295")
-                    .font(.title)
-                    .bold()
-                    .foregroundColor(.white)
-                Text(entry.date, style: .time)
-                    .foregroundColor(.white)
-            }
-            .padding()
+                // text elements and titles
+                HStack(alignment: .top, spacing: 2){
+                    Image("moonAndStars")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 60, height: 60)
+                    Spacer()
+                    Text("11295 miles")
+                        .font(.title)
+                        .bold()
+                        .foregroundColor(.white)
+                        .shadow(color: .black, radius: 1, x: 3, y: 3)
+                        .offset(y:10)
+                    Spacer()
+                    Image("NZstars")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 50, height: 50)
+                        .offset(y:5)
+                }.padding(.horizontal, 10)
+                    
+                
+                //world and humans
+                VStack{
+                    ZStack{
+                    
+                        Image("world")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 320, height: 30)
+                            .offset(y:11)
+                        Image("lines")
+                            .resizable()
+                            .scaledToFill()
+                            .offset(x:0, y: -8)
+                        Image("plane")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40, height: 40)
+                            .offset(x:0, y: -40)
+                            
+                        
+                        HStack(){
+                            Image("man")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 40, height: 40)
+                            Spacer()
+                            Image("woman")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 40, height: 40)
+                        }.padding(.horizontal,10)
+                    }
+                }.ignoresSafeArea()
+                
+            }.padding()
+            
         }
         .containerBackground(.fill.tertiary, for: .widget)
     }
