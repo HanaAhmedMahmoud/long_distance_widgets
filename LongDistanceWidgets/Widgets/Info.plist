@@ -2,6 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleIdentifier</key>
+	<string></string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>LeckerliOne-Regular.ttf</string>
+		<string>DigitalNumbers-Regular.ttf</string>
+		<string>Norican-Regular.ttf
+Norican-Regular.ttf
+Norican-Regular</string>
+		<string>Tiny5-Regular.ttf</string>
+	</array>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionPointIdentifier</key>

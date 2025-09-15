@@ -7,9 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D25996702E78973800E3CA9C /* LeckerliOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D259966F2E78973700E3CA9C /* LeckerliOne-Regular.ttf */; };
+		D25996712E78973800E3CA9C /* LeckerliOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D259966F2E78973700E3CA9C /* LeckerliOne-Regular.ttf */; };
+		D25996722E78973800E3CA9C /* LeckerliOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D259966F2E78973700E3CA9C /* LeckerliOne-Regular.ttf */; };
+		D25996732E78973800E3CA9C /* LeckerliOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D259966F2E78973700E3CA9C /* LeckerliOne-Regular.ttf */; };
 		D2D414602E6B03450076C926 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D4145F2E6B03450076C926 /* WidgetKit.framework */; };
 		D2D414622E6B03450076C926 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D414612E6B03450076C926 /* SwiftUI.framework */; };
 		D2D414732E6B03580076C926 /* WidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D2D4145D2E6B03450076C926 /* WidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D2EDE0652E788C1A0025DF32 /* Tiny5-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2EDE0642E788C1A0025DF32 /* Tiny5-Regular.ttf */; };
+		D2EDE0662E788C1A0025DF32 /* Norican-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2EDE0632E788C1A0025DF32 /* Norican-Regular.ttf */; };
+		D2EDE0672E788C1A0025DF32 /* Tiny5-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2EDE0642E788C1A0025DF32 /* Tiny5-Regular.ttf */; };
+		D2EDE0682E788C1A0025DF32 /* Norican-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2EDE0632E788C1A0025DF32 /* Norican-Regular.ttf */; };
+		D2EDE0692E788C1A0025DF32 /* Tiny5-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2EDE0642E788C1A0025DF32 /* Tiny5-Regular.ttf */; };
+		D2EDE06A2E788C1A0025DF32 /* Norican-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2EDE0632E788C1A0025DF32 /* Norican-Regular.ttf */; };
+		D2EDE06B2E788C1A0025DF32 /* Tiny5-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2EDE0642E788C1A0025DF32 /* Tiny5-Regular.ttf */; };
+		D2EDE06C2E788C1A0025DF32 /* Norican-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2EDE0632E788C1A0025DF32 /* Norican-Regular.ttf */; };
+		D2EDE06E2E788E810025DF32 /* DigitalNumbers-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2EDE06D2E788E810025DF32 /* DigitalNumbers-Regular.ttf */; };
+		D2EDE06F2E788E810025DF32 /* DigitalNumbers-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2EDE06D2E788E810025DF32 /* DigitalNumbers-Regular.ttf */; };
+		D2EDE0702E788E810025DF32 /* DigitalNumbers-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2EDE06D2E788E810025DF32 /* DigitalNumbers-Regular.ttf */; };
+		D2EDE0712E788E810025DF32 /* DigitalNumbers-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2EDE06D2E788E810025DF32 /* DigitalNumbers-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,12 +67,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D259966F2E78973700E3CA9C /* LeckerliOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LeckerliOne-Regular.ttf"; sourceTree = "<group>"; };
 		D2D4142F2E6B03370076C926 /* LongDistanceWidgets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LongDistanceWidgets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D4143C2E6B033A0076C926 /* LongDistanceWidgetsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LongDistanceWidgetsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D414462E6B033A0076C926 /* LongDistanceWidgetsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LongDistanceWidgetsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D4145D2E6B03450076C926 /* WidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D4145F2E6B03450076C926 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		D2D414612E6B03450076C926 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		D2EDE0632E788C1A0025DF32 /* Norican-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Norican-Regular.ttf"; sourceTree = "<group>"; };
+		D2EDE0642E788C1A0025DF32 /* Tiny5-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tiny5-Regular.ttf"; sourceTree = "<group>"; };
+		D2EDE06D2E788E810025DF32 /* DigitalNumbers-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DigitalNumbers-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -132,6 +152,7 @@
 		D2D414262E6B03370076C926 = {
 			isa = PBXGroup;
 			children = (
+				D2EDE0622E788C080025DF32 /* Fonts */,
 				D2D414312E6B03370076C926 /* LongDistanceWidgets */,
 				D2D4143F2E6B033A0076C926 /* LongDistanceWidgetsTests */,
 				D2D414492E6B033A0076C926 /* LongDistanceWidgetsUITests */,
@@ -159,6 +180,17 @@
 				D2D414612E6B03450076C926 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2EDE0622E788C080025DF32 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D2EDE0632E788C1A0025DF32 /* Norican-Regular.ttf */,
+				D2EDE0642E788C1A0025DF32 /* Tiny5-Regular.ttf */,
+				D2EDE06D2E788E810025DF32 /* DigitalNumbers-Regular.ttf */,
+				D259966F2E78973700E3CA9C /* LeckerliOne-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +341,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2EDE0672E788C1A0025DF32 /* Tiny5-Regular.ttf in Resources */,
+				D25996722E78973800E3CA9C /* LeckerliOne-Regular.ttf in Resources */,
+				D2EDE0682E788C1A0025DF32 /* Norican-Regular.ttf in Resources */,
+				D2EDE0712E788E810025DF32 /* DigitalNumbers-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +352,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2EDE06B2E788C1A0025DF32 /* Tiny5-Regular.ttf in Resources */,
+				D2EDE0702E788E810025DF32 /* DigitalNumbers-Regular.ttf in Resources */,
+				D2EDE06C2E788C1A0025DF32 /* Norican-Regular.ttf in Resources */,
+				D25996702E78973800E3CA9C /* LeckerliOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +363,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2EDE0692E788C1A0025DF32 /* Tiny5-Regular.ttf in Resources */,
+				D2EDE06E2E788E810025DF32 /* DigitalNumbers-Regular.ttf in Resources */,
+				D2EDE06A2E788C1A0025DF32 /* Norican-Regular.ttf in Resources */,
+				D25996712E78973800E3CA9C /* LeckerliOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +374,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2EDE0652E788C1A0025DF32 /* Tiny5-Regular.ttf in Resources */,
+				D25996732E78973800E3CA9C /* LeckerliOne-Regular.ttf in Resources */,
+				D2EDE0662E788C1A0025DF32 /* Norican-Regular.ttf in Resources */,
+				D2EDE06F2E788E810025DF32 /* DigitalNumbers-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

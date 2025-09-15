@@ -10,9 +10,9 @@ import SwiftUI
 
 @main
 struct WidgetsBundle: WidgetBundle {
+    @WidgetBundleBuilder
     var body: some Widget {
-        Widgets()
-        WidgetsControl()
-        WidgetsLiveActivity()
+        DistanceWidget()
+        TimerWidget()
     }
 }
