@@ -20,3 +20,10 @@ Created iOS widgets using Swift and Widget toolkit on Xcode bringing prototypes 
   - git pull -> pulls down any changes i make or if you want the most updated version on computer 
 - Initial coding of prototype completed by Hana, need to work on sorting out offsets
 
+### 15/09/2025
+- Project structure will be as follows: Widget Entry, Widget Provider, Widget View (using widget entry), Widget Definitions (gluing both provider and view together), Phillip and Hana to create a diagram together to demonstrate how structures communicate with eachother 
+- Created each data structure for both distance and timer widgets
+- Finished Widget View for both distance and timer widgets, ready for customistion based on distance and time from when two people first met
+- Added fonts onto app
+- Changed Widget Bundle to include both distance and timer widgets
+- Hana to talk Phillip through the changes
