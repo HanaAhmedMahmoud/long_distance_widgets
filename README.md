@@ -25,6 +25,7 @@ Created iOS widgets using Swift and Widget toolkit on Xcode bringing prototypes 
 - Created each data structure for both distance and timer widgets
 - Finished Widget View for both distance and timer widgets, ready for customistion based on distance and time from when two people first met
 - Added fonts onto app (had to change the Noricon-Regular font to LeckerliOne as Noricon was a little dodgy
+- Added new assets for timer widget 
 - Added previews for both distance and timer widgets (comment out which one you don't want to see) 
 - Changed Widget Bundle to include both distance and timer widgets
 - Hana to talk Phillip through the changes
