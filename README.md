@@ -29,3 +29,8 @@ Created iOS widgets using Swift and Widget toolkit on Xcode bringing prototypes 
 - Added previews for both distance and timer widgets (comment out which one you don't want to see) 
 - Changed Widget Bundle to include both distance and timer widgets
 - Hana to talk Phillip through the changes
+
+### 16/09/2025
+- Hana started plane animation on distance widget, to be improved upon
+- Attempted a gif approach, then attempted a frame by frame approach which seems to work better 
+
