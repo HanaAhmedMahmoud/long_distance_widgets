@@ -32,6 +32,7 @@ struct Provider: TimelineProvider {
 struct DistanceEntry: TimelineEntry {
     var date: Date
     let miles: Int
+    let angle: Double
 }
 
 struct TimerEntry: TimelineEntry {
@@ -45,17 +46,27 @@ struct TimerEntry: TimelineEntry {
 // PHILLIP PLEASE DO THIS (your time to shine)
 struct DistanceProvider: TimelineProvider {
     func placeholder(in context: Context) -> DistanceEntry {
-        DistanceEntry(date: Date(), miles: 11295)
+        DistanceEntry(date: Date(), miles: 11295, angle: 0)
     }
 
     func getSnapshot(in context: Context, completion: @escaping (DistanceEntry) -> ()) {
-        completion(DistanceEntry(date: Date(), miles: 11295))
+        completion(DistanceEntry(date: Date(), miles: 11295, angle: 0))
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<DistanceEntry>) -> ()) {
-        let entry = DistanceEntry(date: Date(), miles: 11295)
-        let timeline = Timeline(entries: [entry], policy: .never)
-        completion(timeline)
+        var entries: [DistanceEntry] = []
+        let now = Date()
+
+        //plane animation
+        for second in 0..<60 {
+            let angle = Double(second) / 60 * 2 * .pi
+            let entry = DistanceEntry(date: now.addingTimeInterval(Double(second)),
+                                      miles: 11295,
+                                      angle: angle)
+            entries.append(entry)
+        }
+
+        completion(Timeline(entries: entries, policy: .atEnd))
     }
 }
 
@@ -137,13 +148,27 @@ struct DistanceWidgetsEntryView : View {
                             .resizable()
                             .scaledToFill()
                             .offset(x:0, y: -8)
-                        Image("plane")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 40, height: 40)
-                            .offset(x:0, y: -40)
-                            
                         
+                        //plane animation
+                        GeometryReader { geo in
+                                let leftX: CGFloat = 60
+                                let rightX: CGFloat = geo.size.width - 60
+                                let centerY: CGFloat = geo.size.height / 2 - 20
+                                                
+                                // progress goes 0 → 1 → 0 over time
+                                let progress = abs(sin(entry.angle))
+                                let goingRight = cos(entry.angle) >= 0
+                                let xPos = leftX + (rightX - leftX) * progress
+                                                
+                                Image("plane")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 40, height: 40)
+                                    .position(x: xPos, y: centerY)
+                                    .rotationEffect(.degrees(goingRight ? 0 : 180))
+                        }.frame(height: 50)
+                                            
+                                            
                         HStack(){
                             Image("man")
                                 .resizable()
@@ -319,9 +344,9 @@ struct TimerWidgetEntryView : View {
     // PREVIEWS (chose either, what you want to view in the preview on side)
     
     //#Preview(as: .systemMedium) {
-    //    DistanceWidget()
+     //   DistanceWidget()
     //} timeline: {
-    //    DistanceEntry(date: .now, miles: 11295)
+      //  DistanceEntry(date: .now, miles: 11295, angle: 0 )
     //}
     
     #Preview(as: .systemMedium) {
@@ -330,4 +355,3 @@ struct TimerWidgetEntryView : View {
         TimerEntry(date: .now, remaining: 100000)
     }
     
-
