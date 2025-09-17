@@ -36,3 +36,4 @@ Created iOS widgets using Swift and Widget toolkit on Xcode bringing prototypes 
 
 ### 17/09/2025
 - HANA FINISHED THE PLANE ANIMATION!!!!!!
+- Need to fix bug which isnt allowing widget to be played on phone
