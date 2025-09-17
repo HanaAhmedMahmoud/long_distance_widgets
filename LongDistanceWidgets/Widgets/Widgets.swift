@@ -32,8 +32,12 @@ struct Provider: TimelineProvider {
 struct DistanceEntry: TimelineEntry {
     var date: Date
     let miles: Int
-    let angle: Double
+    let progress: Double
+    let facingRight: Bool
 }
+
+
+
 
 struct TimerEntry: TimelineEntry {
     let date: Date
@@ -46,29 +50,45 @@ struct TimerEntry: TimelineEntry {
 // PHILLIP PLEASE DO THIS (your time to shine)
 struct DistanceProvider: TimelineProvider {
     func placeholder(in context: Context) -> DistanceEntry {
-        DistanceEntry(date: Date(), miles: 11295, angle: 0)
+        DistanceEntry(date: Date(), miles: 11295, progress: 0, facingRight: true)
     }
-
+    
     func getSnapshot(in context: Context, completion: @escaping (DistanceEntry) -> ()) {
-        completion(DistanceEntry(date: Date(), miles: 11295, angle: 0))
+        completion(DistanceEntry(date: Date(), miles: 11295, progress:0, facingRight: true))
     }
-
+    
     func getTimeline(in context: Context, completion: @escaping (Timeline<DistanceEntry>) -> ()) {
         var entries: [DistanceEntry] = []
         let now = Date()
-
-        //plane animation
-        for second in 0..<60 {
-            let angle = Double(second) / 60 * 2 * .pi
-            let entry = DistanceEntry(date: now.addingTimeInterval(Double(second)),
-                                      miles: 11295,
-                                      angle: angle)
+        let totalDuration = 60 // full cycle: there and back
+        let halfDuration = totalDuration / 2
+        
+        for second in 0..<totalDuration {
+            let progress: Double
+            let facingRight: Bool
+            
+            if second < halfDuration {
+                // going there
+                progress = Double(second) / Double(halfDuration)
+                facingRight = true
+            } else {
+                // returning
+                progress = Double(totalDuration - second) / Double(halfDuration)
+                facingRight = false // rotate on return
+            }
+            
+            let entry = DistanceEntry(
+                date: now.addingTimeInterval(Double(second)),
+                miles: 11295,
+                progress: progress,
+                facingRight: facingRight
+            )
             entries.append(entry)
         }
-
+        
         completion(Timeline(entries: entries, policy: .atEnd))
-    }
-}
+        
+    }}
 
 
 struct TimerProvider: TimelineProvider {
@@ -151,22 +171,20 @@ struct DistanceWidgetsEntryView : View {
                         
                         //plane animation
                         GeometryReader { geo in
-                                let leftX: CGFloat = 60
-                                let rightX: CGFloat = geo.size.width - 60
-                                let centerY: CGFloat = geo.size.height / 2 - 20
-                                                
-                                // progress goes 0 → 1 → 0 over time
-                                let progress = abs(sin(entry.angle))
-                                let goingRight = cos(entry.angle) >= 0
-                                let xPos = leftX + (rightX - leftX) * progress
-                                                
-                                Image("plane")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 40, height: 40)
-                                    .position(x: xPos, y: centerY)
-                                    .rotationEffect(.degrees(goingRight ? 0 : 180))
-                        }.frame(height: 50)
+                            let leftX: CGFloat = 60
+                            let rightX: CGFloat = geo.size.width - 60
+                            let centerY: CGFloat = geo.size.height / 2 - 35
+                            
+                            let xPos = leftX + (rightX - leftX) * entry.progress
+                            
+                            Image("plane")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 40, height: 40)
+                                .rotationEffect(entry.facingRight ? .degrees(0) : .degrees(180)) // rotate on return
+                                .position(x: xPos, y: centerY)
+                        }
+                        .frame(height: 50)
                                             
                                             
                         HStack(){
