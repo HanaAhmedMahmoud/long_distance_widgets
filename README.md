@@ -34,3 +34,5 @@ Created iOS widgets using Swift and Widget toolkit on Xcode bringing prototypes 
 - Hana started plane animation on distance widget, to be improved upon
 - Attempted a gif approach, then attempted a frame by frame approach which seems to work better 
 
+### 17/09/2025
+- HANA FINISHED THE PLANE ANIMATION!!!!!!
